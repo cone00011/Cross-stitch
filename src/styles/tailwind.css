@@ -22,5 +22,9 @@
 
 }
 @layer utilities{
-  
+  .parallax {
+    will-change: transform;
+    transition: transform 0.1s linear;
+  }
 }
+

@@ -5,11 +5,57 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+<MainLayout title="Cross Stitch">
+	
+	<section class="Herosection flex justify-start items-center min-h-screen">
+		<img src="/img/STING2.png" alt="sting" class="absolute top-1.5 left-0 w-[300px] h-auto transform translate-y-[-50%]">
+		<img src="/img/CROSSSSSTICHH.png" alt="Cross Stitch Font" class="max-w-[85%] h-auto scale-95 ml-10">
+	  </section>
+	  
+			
+	  <section class="relative parallax" data-speed="0.1">
+		<img src="/img/cross_tekst2.png" alt="Cross Stitch Font text" class="absolute right-[100px] top-[-30px] w-[900px] h-auto">
+	  </section>
+	  
+	  <section class="grid grid-cols-2 mt-[500px]">
+		<img src="/img/GRID_2_4.png" alt="alfabetet" class="w-4/4 h-auto ml-[250px]">
+	  </section>
+	  
+
+	  <section class="grid grid-cols-2 mt-[90px]">
+		<img src="/img/Negativ_font_3.png" alt="alfabetet" class="w-4/4 h-auto ml-[450px]">
+	  </section>
+	
+	  <section class="grid grid-cols-2 mt-[-80px] mb-35 relative parallax" data-speed="0.1">
+		<img src="/img/inspiration3.png" alt="inspiration" class="w-2/6 h-auto ml-[800px]">
+	  </section>
+	  
+
+	
+	  <section class="flex justify-center w-[1000px] h-auto mx-auto">
+		<img src="/img/inspo_billeder.png" alt="inspirations billeder">
+	  </section>
+	  
+	
+	  
+	  
+	  
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+    window.addEventListener("scroll", function () {
+      let scrolled = window.scrollY;
+      document.querySelectorAll(".parallax").forEach((element) => {
+        let speed = parseFloat(element.getAttribute("data-speed")) || 0.2;
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+  }
+});
+
+
+</script>
+
+
 </MainLayout>
